@@ -223,3 +223,4 @@ D:\Practice Projects\CRUDMVCAPI\CRUDMVCAPI\obj\Debug\net8.0\refint\CRUDMVCAPI.dl
 D:\Practice Projects\CRUDMVCAPI\CRUDMVCAPI\obj\Debug\net8.0\CRUDMVCAPI.pdb
 D:\Practice Projects\CRUDMVCAPI\CRUDMVCAPI\obj\Debug\net8.0\CRUDMVCAPI.genruntimeconfig.cache
 D:\Practice Projects\CRUDMVCAPI\CRUDMVCAPI\obj\Debug\net8.0\ref\CRUDMVCAPI.dll
+D:\Practice Projects\CRUDMVCAPI\CRUDMVCAPI\obj\Debug\net8.0\CRUDMVCAPI.sourcelink.json

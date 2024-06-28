@@ -41,6 +41,57 @@ namespace CRUDMVCAPI.Controllers
                 TempData["Insert Message"] = "Student Added..";
                 return RedirectToAction("Index");
             }
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+
+            Student std = new Student();
+            HttpResponseMessage responce = client.GetAsync(url + id).Result;
+
+            if (responce.IsSuccessStatusCode)
+            {
+                string result = responce.Content.ReadAsStringAsync().Result;
+                var data = JsonConvert.DeserializeObject<Student>(result);
+                if (data != null)
+                {
+                    std = data;
+                }
+            }
+
+            return View(std);
+        }
+        [HttpPost]
+        public IActionResult Edit(Student std)
+        {
+            string data = JsonConvert.SerializeObject(std);
+            StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+            HttpResponseMessage responce = client.PutAsync(url + std.id, content).Result;
+            if (responce.IsSuccessStatusCode)
+            {
+                TempData["Update Message"] = "Student Updated..";
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Details(int id)
+        {
+
+            Student std = new Student();
+            HttpResponseMessage responce = client.GetAsync(url + id).Result;
+
+            if (responce.IsSuccessStatusCode)
+            {
+                string result = responce.Content.ReadAsStringAsync().Result;
+                var data = JsonConvert.DeserializeObject<Student>(result);
+                if (data != null)
+                {
+                    std = data;
+                }
+            }
+
             return View(std);
         }
     }

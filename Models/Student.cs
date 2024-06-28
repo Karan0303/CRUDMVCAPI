@@ -4,8 +4,6 @@ namespace CRUDMVCAPI.Models
 {
     public class Student
     {
-
-
         public int id { get; set; }
         [Required]
         public string studentName { get; set; }
