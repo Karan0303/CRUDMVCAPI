@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUDMVCAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d392d70e327984cf6a8b13274a564534c5f3d9bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b74bd11cb370011ac99946d9bc314667211ad2d7")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUDMVCAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUDMVCAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

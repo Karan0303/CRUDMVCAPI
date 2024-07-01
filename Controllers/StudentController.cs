@@ -94,6 +94,40 @@ namespace CRUDMVCAPI.Controllers
 
             return View(std);
         }
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+
+            Student std = new Student();
+            HttpResponseMessage responce = client.GetAsync(url + id).Result;
+
+            if (responce.IsSuccessStatusCode)
+            {
+                string result = responce.Content.ReadAsStringAsync().Result;
+                var data = JsonConvert.DeserializeObject<Student>(result);
+                if (data != null)
+                {
+                    std = data;
+                }
+            }
+
+            return View(std);
+        }
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+
+            HttpResponseMessage responce = client.DeleteAsync(url + id).Result;
+
+            if (responce.IsSuccessStatusCode)
+            {
+                TempData["Delete Message"] = "Student Deleted..";
+                return RedirectToAction("Index");
+
+            }
+
+            return View();
+        }
     }
 }
 
